@@ -8,6 +8,12 @@ implementing In-app messaging.
 
 #Payment Screen
 
+The payment screen has a default value of 100 $/year.
+When the discount button is clicked a discounted price is shown
+in the EditText view.
+
+![WhatsApp Image 2022-08-02 at 10 35 32 PM](https://user-images.githubusercontent.com/79468798/182433184-d9e69501-6c0a-4b50-866b-3afda06cc473.jpeg)
+
 #Real-Time-Database(Firebase)
 
 The Firebase consists of discounted price which is retrieved 
