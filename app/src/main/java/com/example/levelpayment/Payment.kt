@@ -42,19 +42,19 @@ class Payment: AppCompatActivity() {
 
         databaseReference = firebaseDatabase!!.getReference("Data")
 
-        getdata()
+        getdata(binding)
     }
+}
 
-    suspend fun getdata() {
+fun Payment.getdata(binding: PaymentwindowBinding){
 
-        databaseReference!!.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                val value = snapshot.getValue(String::class.java)
-                binding.idEdtAmt.setText(value)
-            }
-            override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@Payment, "Fail to get data.", Toast.LENGTH_SHORT).show()
-            }
-        })
-    }
+    databaseReference!!.addValueEventListener(object : ValueEventListener {
+        override fun onDataChange(snapshot: DataSnapshot) {
+            val value = snapshot.getValue(String::class.java)
+            binding.idEdtAmt.setText(value)
+        }
+        override fun onCancelled(error: DatabaseError) {
+            Toast.makeText(this@getdata, "Fail to get data.", Toast.LENGTH_SHORT).show()
+        }
+    })
 }
