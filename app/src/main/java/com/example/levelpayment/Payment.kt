@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.levelpayment.databinding.PaymentwindowBinding
 import com.google.firebase.database.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class Payment: AppCompatActivity() {
     var firebaseDatabase: FirebaseDatabase? = null
@@ -25,19 +28,24 @@ class Payment: AppCompatActivity() {
         //Log.i("No:","20")
         binding = DataBindingUtil.setContentView(this, R.layout.paymentwindow)
         binding.paymentValue = paymentValue
+
+        binding.idDiscount.setOnClickListener(){
+            GlobalScope.launch(Dispatchers.IO) {
+                discount(it)
+            }
+        }
     }
 
-    fun discount(view: View)
+    suspend fun discount(view: View)
     {
         firebaseDatabase = FirebaseDatabase.getInstance()
 
         databaseReference = firebaseDatabase!!.getReference("Data")
 
-
         getdata()
     }
 
-    private fun getdata() {
+    suspend fun getdata() {
 
         databaseReference!!.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

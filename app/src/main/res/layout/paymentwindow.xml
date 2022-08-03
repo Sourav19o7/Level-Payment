@@ -42,7 +42,7 @@
             android:text="@={paymentValue.value}" />
 
         <Button
-            android:id="@+id/idBtnMakePaymanet"
+            android:id="@+id/idBtnMakePayment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/idEdtAmt"
@@ -54,16 +54,16 @@
             android:textAllCaps="false" />
 
         <Button
+            android:id="@+id/idDiscount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/idBtnMakePaymanet"
+            android:layout_alignBottom="@+id/idBtnMakePayment"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="277dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="215dp"
-            android:onClick="discount"
             android:text="Discount" />
     </RelativeLayout>
 </layout>
