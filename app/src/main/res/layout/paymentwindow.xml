@@ -1,61 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:orientation="vertical"
-    tools:context=".Payment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/idTVHead"
+    <data>
+        <variable
+            name="paymentValue"
+            type="com.example.levelpayment.PaymentValue" />
+    </data>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/idEdtAmt"
-        android:layout_margin="4dp"
-        android:gravity="center"
-        android:padding="4dp"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textColor="@color/purple_200"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        tools:context=".Payment">
 
-    <EditText
-        android:id="@+id/idEdtAmt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:text="100 $/yr" />
+        <TextView
+            android:id="@+id/idTVHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/idEdtAmt"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/purple_200"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/idBtnMakePaymanet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/idEdtAmt"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:padding="4dp"
-        android:text="Make Payment"
-        android:textAllCaps="false" />
+        <EditText
+            android:id="@+id/idEdtAmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@={paymentValue.value}" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/idBtnMakePaymanet"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="277dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="215dp"
-        android:text="Discount"
-        android:onClick="discount"/>
-</RelativeLayout>
+        <Button
+            android:id="@+id/idBtnMakePaymanet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idEdtAmt"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:padding="4dp"
+            android:text="Make Payment"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/idBtnMakePaymanet"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="277dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="215dp"
+            android:onClick="discount"
+            android:text="Discount" />
+    </RelativeLayout>
+</layout>
