@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/soura/AndroidStudioProjects/LevelPayment/app/src/main/res/drawable/layout_bg.xml" value="0.207" />
         <entry key="..\:/Users/soura/AndroidStudioProjects/LevelPayment/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/soura/AndroidStudioProjects/LevelPayment/app/src/main/res/layout/layout_bg.xml" value="0.25" />
         <entry key="..\:/Users/soura/AndroidStudioProjects/LevelPayment/app/src/main/res/layout/paymentwindow.xml" value="0.25" />
       </map>
     </option>
