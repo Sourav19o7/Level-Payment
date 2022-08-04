@@ -4,7 +4,17 @@ implementing the payment screen and home page,
 where the app has been configured using Firebase Console 
 implementing In-app messaging.
 
+The use of the following android and kotlin properties have been done as follows:
+1. In-app messaging : To take discounted price from firebase console
+2. data binding : To bind the UI componenets with the layout
+3. coroutine : To run the in-app messaging the background thread
+4. extension funciton : To add a new getdata() functionality in the Payment class
+
 #Screen-Shots
+
+#Home Screen
+
+On clicking anywhere in the homescreen the user jumps to the payment screen.
 
 #Payment Screen
 
