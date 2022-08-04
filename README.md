@@ -16,7 +16,7 @@ The use of the following android and kotlin properties have been done as follows
 
 On clicking anywhere in the homescreen the user jumps to the payment screen.
 
-![WhatsApp Image 2022-08-04 at 6 03 42 PM](https://user-images.githubusercontent.com/79468798/182858986-bb6560df-34ef-40ff-9477-3f07d59700b0.jpeg)
+![WhatsApp Image 2022-08-04 at 6 50 39 PM](https://user-images.githubusercontent.com/79468798/182859211-1512b7d0-31f7-476e-a951-be0ea21c0a87.jpeg)
 
 #Payment Screen
 
