@@ -32,3 +32,10 @@ The Firebase consists of discounted price which is retrieved
 by the app when discount button is clicked.
 
 ![Firebase Console](https://user-images.githubusercontent.com/79468798/182432661-ab678a80-e17d-432e-9ed4-fd2485888721.jpg)
+
+The working of the application looks like
+
+
+https://user-images.githubusercontent.com/79468798/183012416-8746cd8e-3972-4bea-947a-82cf866a1edc.mp4
+
+
